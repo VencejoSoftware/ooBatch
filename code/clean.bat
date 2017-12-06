@@ -4,6 +4,7 @@
 set path_code=%1%
 
 for /d /r %path_code%\ %%R in (__history) do if exist "%%R" (rd /s /q "%%R")
+for /d /r %path_code%\ %%R in (__recovery) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (backup) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (lib) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (build\debug) do if exist "%%R" (rd /s /q "%%R")
