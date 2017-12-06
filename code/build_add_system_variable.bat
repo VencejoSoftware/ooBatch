@@ -1,6 +1,11 @@
-rem @echo off
-set path_3rd_party=..\..\..\3rd_party
+@echo off
 set path_ooLib=..\..\
+set path_3rd_party=%path_ooLib%..\3rd_party\
+
+if not exist %path_3rd_party% (
+  mkdir %path_3rd_party%
+)
+
 set absolute_path_3rd=
 set absolute_path_ooLib=
 

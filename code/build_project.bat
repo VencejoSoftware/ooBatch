@@ -16,7 +16,5 @@ if exist "C:\Program Files (x86)\Embarcadero\Studio\19.0\bin\rsvars.bat" (
 @echo "Running ambient vars..."
 call !ide_path!\rsvars.bat
 
-call "..\..\ooBatch\code\build_add_system_variable.bat"
-
 @echo Building with Delphi !project_path!...
 call MSBuild /t:Clean;Build /p:config=%config_mode% "%path_project%\!project_path!\%project%"

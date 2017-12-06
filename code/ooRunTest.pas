@@ -64,7 +64,7 @@ begin
 {$WARN SYMBOL_PLATFORM ON}
   if ParamCount > 0 then
   begin
-    with AgiledoxTestRunner.RunRegisteredTests(mnpUnderscore, cnpPrefix, rxbContinue) do
+    with AgiledoxTestRunner.RunRegisteredTests(mnpUnderscore, cnpPrefix) do
       Free;
   end
   else

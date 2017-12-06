@@ -1,20 +1,15 @@
-@echo off
+rem @echo off
 
 setlocal EnableDelayedExpansion
 
-set path_3rd_party=..\..\3rd_party
+call build_add_system_variable.bat
+
+set path_3rd_party=%delphi3rdParty%
 
 if exist "C:\Program Files (x86)\Embarcadero\Studio\19.0\bin\rsvars.bat" (
   set ide_path="C:\Program Files (x86)\Embarcadero\Studio\19.0\bin"
 ) else if exist "C:\Program Files (x86)\Embarcadero\RAD Studio\7.0\bin\" (
   set ide_path="C:\Program Files (x86)\Embarcadero\RAD Studio\7.0\bin"
-)
-
-@echo "Running ambient vars..."
-call !ide_path!\rsvars.bat
-
-if not exist %path_3rd_party% (
-  mkdir %path_3rd_party%
 )
 
 if not exist %path_3rd_party%\dxDUnit\ (
@@ -30,6 +25,8 @@ if not exist %path_3rd_party%\CodeCoverage\ (
   git clone https://github.com/VencejoSoftware/codecoverage.git %path_3rd_party%\CodeCoverage\
 )
 if not exist %path_3rd_party%\CodeCoverage\CodeCoverage.exe (
+  @echo "Running ambient vars..."
+  call !ide_path!\rsvars.bat
   @echo "Building CodeCoverage..."
   set current="%cd%"
   cd %path_3rd_party%\CodeCoverage\
