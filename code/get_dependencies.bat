@@ -2,7 +2,7 @@
 
 setlocal EnableDelayedExpansion
 
-call build_add_system_variable.bat
+call  %delphiooLib%\ooBatch\code\build_add_system_variable.bat
 
 set path_3rd_party=%delphi3rdParty%
 
