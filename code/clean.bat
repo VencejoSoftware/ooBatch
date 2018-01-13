@@ -11,12 +11,11 @@ for /d /r %path_code%\ %%R in (build\debug) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (build\release) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (build) do if exist "%%R" (rd /s /q "%%R")
 for /d /r %path_code%\ %%R in (tipuesearch) do if exist "%%R" (rd /s /q "%%R")
+for /d /r %path_code%\ %%R in (code-documentation) do if exist "%%R" (rd /s /q "%%R")
 
 del /s %path_code%\test_result.txt
 del /s %path_code%\*.ec
 del /s %path_code%\*.em
-del /s %path_code%\*.xml
-del /s %path_code%\*.html
 del /s %path_code%\*.exe
 del /s %path_code%\*.drc
 del /s %path_code%\*.map

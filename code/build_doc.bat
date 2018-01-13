@@ -1,7 +1,7 @@
 @echo off
 @echo "Building documentation..."
 
-set path_doc=..\doc\
+set path_doc=..\code-documentation\
 
 @echo "Deleting old files..."
 rmdir /s/q %path_doc%\
