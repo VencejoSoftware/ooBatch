@@ -40,7 +40,7 @@ call %path_pasdoc%\pasdoc ^
   --source pas_doc_files.txt ^
   --title %app_title% ^
   --introduction %path_doc%introduction.txt ^
-  --language=es ^
+  --language=en ^
   --use-tipue-search ^
   --include-creation-time
 

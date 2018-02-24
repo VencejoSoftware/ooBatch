@@ -19,6 +19,8 @@ del /s %path_code%\*.ec
 del /s %path_code%\*.em
 del /s %path_code%\*.exe
 del /s %path_code%\*.drc
+del /s %path_code%\*.dti
+del /s %path_code%\*.dof
 del /s %path_code%\*.map
 del /s %path_code%\*.dll
 del /s %path_code%\*.dcu
